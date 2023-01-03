@@ -14,4 +14,4 @@ rows = zeros.shape[0] + ones.shape[0]
 
 # Определите выборочное среднее для столбца MIP:
 # Введите ответ с точностью до трех знаков.
-mip_mean = round(data['MIP'].mean(), 3)
+mip_mean = round(pd.concat([zeros, ones], ignore_index=True)['MIP'].mean(), 3)
